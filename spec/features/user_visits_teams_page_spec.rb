@@ -15,6 +15,8 @@ Acceptance Criteria
 
     visit teams_path
 
-    expect(page).to have_content("Welcome to SPORTS")
+    expect(page).to have_content("New York Jets")
+    expect(page).to have_content("NFC South")
+    expect(page).to have_content("San Diego Chargers")
   end
 end
