@@ -1,1 +1,6 @@
- Welcome to SPORTS!!
+ Welcome to SPORTS!!<br><br>
+
+ <% @teams.each do |team| %>
+ <%= team["name"] %><br>
+ <%= team["division"]["name"] %><br><br>
+ <% end %>
