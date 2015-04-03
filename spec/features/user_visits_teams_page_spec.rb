@@ -11,7 +11,7 @@ Acceptance Criteria
 [x] I must be able to see division names
 ) do
 
-  scenario "user sucessfully navigates to a concert page" do
+  scenario "user sucessfully navigates to the teams page" do
 
     visit teams_path
 
