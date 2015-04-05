@@ -1,0 +1,11 @@
+<% @conferences.each do |conference| %>
+  <% if conference["id"].to_s == params["id"].to_s %>
+    <h1><%= conference["name"] %></h1>
+  <% end %>
+<% end %>
+
+<% @divisions.each do |division| %>
+  <% if division["conference_id"].to_s == params["id"].to_s %>
+    <%= link_to division["name"], division_path(division["id"]) %><br>
+  <% end %>
+<% end %>
