@@ -1,0 +1,11 @@
+<% @divisions.each do |division| %>
+  <% if division["id"].to_s == params["id"] %>
+    <h1><%= division["name"] %></h1><br>
+  <% end %>
+<% end %>
+
+<% @teams.each do |team| %>
+  <% if team["division"]["id"].to_s == params["id"].to_s %>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
+  <% end %>
+<% end %>
