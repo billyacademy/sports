@@ -4,7 +4,7 @@
 <h1> AFC EAST </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "AFC East"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
@@ -12,7 +12,7 @@
 <h1> AFC NORTH </h1>
   <% @teams.each do |team| %>
     <% if team["division"]["name"] == "AFC North"  %>
-      <%= team["name"] %><br>
+      <%= link_to team["name"], team_path(team["id"]) %><br>
       <%= team["division"]["name"] %><br><br>
     <% end %>
 <% end %>
@@ -20,7 +20,7 @@
 <h1> AFC WEST </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "AFC West"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
@@ -28,7 +28,7 @@
 <h1> AFC SOUTH </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "AFC South"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
@@ -36,7 +36,7 @@
 <h1> NFC EAST </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "NFC East"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
@@ -44,7 +44,7 @@
 <h1> NFC NORTH </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "NFC North"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
@@ -52,7 +52,7 @@
 <h1> NFC WEST </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "NFC West"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
@@ -60,7 +60,7 @@
 <h1> NFC SOUTH </h1>
 <% @teams.each do |team| %>
   <% if team["division"]["name"] == "NFC South"  %>
-    <%= team["name"] %><br>
+    <%= link_to team["name"], team_path(team["id"]) %><br>
     <%= team["division"]["name"] %><br><br>
   <% end %>
 <% end %>
