@@ -3,8 +3,16 @@
     <%= team["name"] %><br>
     <% @players.each do |player| %>
       <% if player["team_id"].to_s == params["id"] %>
-        Player Name: <%= player["name"] %><br>
-        Position: <%= player["position"] %><br><br>
+        <table border="1">
+        <tr>
+          <th style="width:200px">Player Name</th>
+          <th>Position</th>
+        </tr>
+        <tr>
+          <td><%= player["name"] %></td>
+          <td><%= player["position"] %></td>
+        </tr>
+        </table>
       <% end %>
     <% end %>
   <% end %>
