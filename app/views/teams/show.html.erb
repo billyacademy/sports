@@ -1,5 +1,11 @@
 <% @teams.each do |team| %>
   <% if team["id"].to_s == params["id"].to_s %>
-    <%= team["name"] %>
+    <%= team["name"] %><br>
+    <% @players.each do |player| %>
+      <% if player["team_id"].to_s == params["id"] %>
+        Player Name: <%= player["name"] %><br>
+        Position: <%= player["position"] %><br><br>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
