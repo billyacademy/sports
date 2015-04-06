@@ -11,5 +11,6 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @players = JSON.load(open(player_url))
   end
 end
