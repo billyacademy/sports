@@ -14,4 +14,8 @@ module ApplicationHelper
   def roster_url
     "https://foot-rosters.herokuapp.com/teams"
   end
+
+  def player_url
+    "https://foot-rosters.herokuapp.com/players"
+  end
 end
