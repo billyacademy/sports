@@ -1,19 +1,19 @@
 <% @teams.each do |team| %>
   <% if team["id"].to_s == params["id"].to_s %>
     <%= team["name"] %><br>
-    <% @players.each do |player| %>
-      <% if player["team_id"].to_s == params["id"] %>
         <table border="1">
         <tr>
           <th style="width:200px">Player Name</th>
           <th>Position</th>
         </tr>
+    <% @players.each do |player| %>
+      <% if player["team_id"].to_s == params["id"] %>
         <tr>
           <td><%= player["name"] %></td>
           <td><%= player["position"] %></td>
         </tr>
-        </table>
       <% end %>
     <% end %>
+    </table>
   <% end %>
 <% end %>
