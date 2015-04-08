@@ -7,12 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to "Home", root_path %>
-<%= link_to "Conferences", conferences_path %>
-<%= link_to "Divisions", divisions_path %>
-<%= link_to "Teams", teams_path %><br><br>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-<%= yield %>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Conferences", conferences_path %></li>
+          <li><%= link_to "Divisions", divisions_path %></li>
+          <li><%= link_to "Teams", teams_path %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9" "col-sm-4"><%= yield %></div>
+      <div class="col-md-3" "col-sm-4">
+        <h2>Welcome to Sports!</h2>
+        This is a website that will keep you up to date with your favorite team's roster.  It leverages the data provided by another web application in the form of JSON.
+      </div>
+    </div>
+  </div>
 </body>
 </html>
