@@ -23,7 +23,13 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Conferences", conferences_path %></li>
+          <li class="dropdown:hover">
+            <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" aria-expanded="false">Conferences</a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "AFC", conference_path(1) %></li>
+              <li><%= link_to "NFC", conference_path(2) %></li>
+            </ul>
+          </li>
           <li><%= link_to "Divisions", divisions_path %></li>
           <li><%= link_to "Teams", teams_path %></li>
         </ul>
@@ -32,7 +38,6 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
 
 
   <div class="container">
