@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "teams#index"
+  root "homes#index"
   resources :teams, only: [:index, :show]
   resources :divisions, only: [:index, :show]
   resources :conferences, only: [:index, :show]
